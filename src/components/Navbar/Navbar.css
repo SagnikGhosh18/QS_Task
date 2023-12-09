@@ -1,0 +1,11 @@
+.button{
+    display: flex;
+    flex-direction: row;
+}
+span{
+    display: flex;
+    flex-direction: row;
+    border: 20px;
+    border-width: 1px;
+    border-style: solid;
+}
