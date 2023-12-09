@@ -4,7 +4,7 @@ import {tickets} from '../../data/_data.js';
 
 const Column = ({title, group, order, usrid}) =>{
 
-    const filteredTickets = tickets.filter((ticket) =>{
+    let filteredTickets = tickets.filter((ticket) =>{
         switch (group){
             case "status": return ticket.status===title;
             case "priority": return ticket.priority===title;
@@ -13,6 +13,21 @@ const Column = ({title, group, order, usrid}) =>{
         }
     });
 
+    switch(order){
+        case "title": filteredTickets.sort((a, b) => {
+            // Convert titles to lowercase for case-insensitive sorting
+            const titleA = a.title.toLowerCase();
+            const titleB = b.title.toLowerCase();
+          
+            // Use localeCompare for string comparison
+            return titleA.localeCompare(titleB);
+          });
+          break;
+        default: 
+            filteredTickets.sort((a, b) => {
+                return b.priority-a.priority;
+            });
+    }
 
     return(
         <>
