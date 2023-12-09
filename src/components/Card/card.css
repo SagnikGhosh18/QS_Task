@@ -1,0 +1,13 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    border: 1px;
+    border-width: 1px;
+    border-style: solid;
+  }
+  .lastline {
+    display: flex;
+    gap: 10px;
+  }
+  

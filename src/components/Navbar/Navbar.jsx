@@ -20,7 +20,7 @@ const Navbar = (props) =>{
 
     if(isOpen){
         display = 
-        <>
+        <div>
             <div className='button' onClick={handleClick}>
                 <span>
                     <ion-icon name="options-outline"></ion-icon>
@@ -28,7 +28,7 @@ const Navbar = (props) =>{
                     <ion-icon name="caret-up-outline"></ion-icon>
                 </span>
             </div>
-            <div>
+            <div >
                 <label htmlFor="displayOption">Grouping:</label>
                 <select
                     id="displayOption"
@@ -48,7 +48,7 @@ const Navbar = (props) =>{
                     <option value="title">Title</option>
                 </select>
             </div>
-        </>
+        </div>
         
         
     }
