@@ -2,12 +2,12 @@ import Card from "../Card/Card"
 
 import {tickets} from '../../data/_data.js';
 
-const Column = ({title, group, order, usrid}) =>{
+const Column = ({title, group, order, usrid, pr}) =>{
 
     let filteredTickets = tickets.filter((ticket) =>{
         switch (group){
             case "status": return ticket.status===title;
-            case "priority": return ticket.priority===title;
+            case "priority": return ticket.priority===pr;
             case "user": return ticket.userId===usrid;
             default: return ticket.status===title;
         }
